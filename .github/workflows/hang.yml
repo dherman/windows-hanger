@@ -1,0 +1,22 @@
+name: publish
+
+env:
+  NODE_VERSION: 18.x
+  NODE_REGISTRY: 'https://registry.npmjs.org'
+
+on:
+  push:
+
+jobs:
+  hang:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - name: Hang
+        run: npm test

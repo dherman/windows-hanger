@@ -1,0 +1,15 @@
+{
+  "name": "windows-hanger",
+  "version": "0.0.1",
+  "description": "Minimal test case to hang GHA Windows runner reading stdin from an npm script",
+  "main": "index.js",
+  "scripts": {
+    "test": "jq -c < build.log | read-stdin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "read-stdin": "file:pkgs/read-stdin"
+  }
+}
