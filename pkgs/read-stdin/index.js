@@ -30,8 +30,8 @@ function parseLine(line) {
 async function go() {
   try {
     console.error("starting up read-stdin");
-    // process.stdin.resume();
-    // process.stdin.setEncoding('utf-8');
+    process.stdin.resume();
+    process.stdin.setEncoding('utf-8');
     const rl = readline.createInterface({
       input: process.stdin,
       terminal: false
