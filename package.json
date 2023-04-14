@@ -4,7 +4,7 @@
   "description": "Minimal test case to hang GHA Windows runner reading stdin from an npm script",
   "main": "index.js",
   "scripts": {
-    "test": "jq -c < build.log | read-stdin"
+    "test": "cargo build --message-format=json --release | read-stdin"
   },
   "keywords": [],
   "author": "",
